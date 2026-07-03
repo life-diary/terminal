@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📂 Hub 01: Profile & Faves</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #00FFFF;
+            font-family: "Courier New", Courier, monospace;
+            padding: 60px 20px;
+        }
+        table {
+            border: 3px ridge #00FFFF;
+            background-color: #001111;
+            padding: 25px;
+            width: 550px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            color: #FF00FF;
+            font-family: 'Arial Black', sans-serif;
+            border-bottom: 2px dashed #00FFFF;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .search-container {
+            text-align: center;
+            margin: 15px 0 25px 0;
+        }
+        .retro-search {
+            background-color: #000;
+            border: 2px inset #00FFFF;
+            color: #00FFFF;
+            font-family: "Courier New", monospace;
+            padding: 5px;
+            width: 70%;
+        }
+        ul {
+            list-style-type: "💾 ";
+            line-height: 2;
+            font-size: 18px;
+            padding-left: 40px;
+        }
+        a {
+            color: #00FFFF;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #FF00FF;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <h2>💾 DIRECTORY: ABOUT ME</h2>
+                
+                <div class="search-container">
+                    <input type="text" id="aboutSearch" class="retro-search" placeholder="Type to filter files..." onkeyup="filterAbout()">
+                </div>
+                
+                <ul id="aboutList">
+                    <li><a href="about-myself.html">identity.txt (Who am I?)</a></li>
+                    <li><a href="fav-food.html">fuel.exe (My favorite foods)</a></li>
+                    <li><a href="fav-celeb.html">icons.dll (Celebrity)</a></li>
+                    <li><a href="fav-book.html">library.dat (Book I think is elite)</a></li>
+                </ul>
+
+                <a href="index.html" class="back-link">&lt;&lt; BACK TO HOMEPAGE</a>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function filterAbout() {
+            let input = document.getElementById('aboutSearch').value.toLowerCase();
+            let listItems = document.getElementById('aboutList').getElementsByTagName('li');
+            
+            for (let i = 0; i < listItems.length; i++) {
+                let text = listItems[i].textContent || listItems[i].innerText;
+                if (text.toLowerCase().indexOf(input) > -1) {
+                    listItems[i].style.display = "";
+                } else {
+                    listItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

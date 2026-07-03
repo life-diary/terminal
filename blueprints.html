@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📁 System File: blueprints.dat</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #00FFFF; /* Cyan Theme */
+            font-family: "Courier New", Courier, monospace;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #FF00FF; /* Hot Pink Header */
+            font-family: 'Arial Black', sans-serif;
+            border-bottom: 2px dashed #00FFFF;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+        .vault-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .vault-card {
+            border: 3px ridge #FF00FF;
+            background-color: #001111;
+            padding: 20px;
+            width: 440px; /* Gives the previews breathing room */
+            text-align: left;
+            box-sizing: border-box;
+        }
+        .vault-title {
+            color: #00FF00; /* Neon Green */
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-bottom: 1px dotted #FF00FF;
+            padding-bottom: 5px;
+        }
+        .vault-desc {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            color: #00FFFF;
+        }
+        /* Media Box - forces all pics, videos, and PDFs to the exact same size */
+        .media-box {
+            width: 100%;
+            height: 260px;
+            border: 2px solid #00FFFF;
+            background-color: #000;
+            display: block;
+        }
+        /* Ensures images scale and crop cleanly inside the box */
+        img.media-box {
+            object-fit: cover;
+        }
+        video.media-box {
+            object-fit: contain; /* Keeps video aspect ratio safe inside the black border */
+        }
+        iframe.media-box {
+            background-color: #ffffff; /* Gives PDFs a clean backdrop inside the frame */
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            color: #00FF00;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📁 /PROJECT_BLUEPRINTS/</h1>
+    
+    <p style="margin-bottom: 40px; color: #FF00FF;">[!] ACCESSING LIVE MULTI-MEDIA LOG: NO DOWNLOADS REQUIRED</p>
+
+    <div class="vault-container">
+
+        <div class="vault-card">
+            <div class="vault-title">Hovercraft</div>
+            <div class="vault-desc">A group assignment in Gr 10 Comp Eng class to make a hovercraft (this thing was a hell of a stress)!</div>
+            <img src="hovercraft.jpg" alt="Project Image" class="media-box">
+        </div>
+
+        <div class="vault-card">
+            <div class="vault-title">Hovercraft testing</div>
+            <div class="vault-desc">Me & my friends made different prototypes for the hovercraft and this prototype tested in this video was one of them.</div>
+            <video controls class="media-box">
+                <source src="hovercraft.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    <div class="vault-card">
+            <div class="vault-title">Monocase</div>
+            <div class="vault-desc">A group assignment in Gr 10 business class. Me & my friends decided to make a special type of pencil case with an electric sharpener and a phone charger attached. We named it "Monocase". This picture was taken by my friend when we had to present it to the school.</div>
+            <img src="monocase.jpg" alt="Project Image" class="media-box">
+        </div>
+        
+<!-- ASSET: GOOGLE SITES SNAPSHOTS -->
+<div class="vault-card">
+    <div class="vault-title">Fake website for Monocase</div>
+    <div class="vault-desc">I actually came up with idea and I don't think any other group in my class made a website for their products. After coming up with the idea, my friends supported this idea and we designed it together. Sorry for these goofy screenshots, my code likes to make pictures compact!</div>
+    
+    <!-- THE OVERFLOW BOX (LOCKED DOWN RECTANGLE) -->
+    <div id="sites-vault" class="media-box" style="display: flex; overflow: hidden; scroll-behavior: smooth; position: relative; width: 100%; height: 260px; max-height: 260px;">
+        
+        <!-- SLIDE 1 -->
+        <div style="flex: 0 0 100%; width: 100%; height: 100%; position: relative;">
+            <img src="site1.png" style="width: 100%; height: 100%; object-fit: cover;">
+            <!-- SCROLL RIGHT BUTTON -->
+            <button onclick="document.getElementById('sites-vault').scrollBy({left: document.getElementById('sites-vault').clientWidth, behavior: 'smooth'})" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.8); color: #00FFFF; border: 1px solid #FF00FF; padding: 5px 10px; font-weight: bold; cursor: pointer; z-index: 10;">&gt;</button>
+        </div>
+        
+        <!-- SLIDE 2 -->
+        <div style="flex: 0 0 100%; width: 100%; height: 100%; position: relative;">
+            <!-- SCROLL LEFT BUTTON -->
+            <button onclick="document.getElementById('sites-vault').scrollBy({left: -document.getElementById('sites-vault').clientWidth, behavior: 'smooth'})" style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.8); color: #00FFFF; border: 1px solid #FF00FF; padding: 5px 10px; font-weight: bold; cursor: pointer; z-index: 10;">&lt;</button>
+            
+            <img src="site2.png" style="width: 100%; height: 100%; object-fit: cover;">
+            
+            <!-- SCROLL RIGHT BUTTON -->
+            <button onclick="document.getElementById('sites-vault').scrollBy({left: document.getElementById('sites-vault').clientWidth, behavior: 'smooth'})" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.8); color: #00FFFF; border: 1px solid #FF00FF; padding: 5px 10px; font-weight: bold; cursor: pointer; z-index: 10;">&gt;</button>
+        </div>
+        
+        <!-- SLIDE 3 -->
+        <div style="flex: 0 0 100%; width: 100%; height: 100%; position: relative;">
+            <!-- SCROLL LEFT BUTTON -->
+            <button onclick="document.getElementById('sites-vault').scrollBy({left: -document.getElementById('sites-vault').clientWidth, behavior: 'smooth'})" style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.8); color: #00FFFF; border: 1px solid #FF00FF; padding: 5px 10px; font-weight: bold; cursor: pointer; z-index: 10;">&lt;</button>
+            
+            <img src="site3.png" style="width: 100%; height: 100%; object-fit: cover;">
+            <!-- SCROLL RIGHT BUTTON -->
+            <button onclick="document.getElementById('sites-vault').scrollBy({left: document.getElementById('sites-vault').clientWidth, behavior: 'smooth'})" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.8); color: #00FFFF; border: 1px solid #FF00FF; padding: 5px 10px; font-weight: bold; cursor: pointer; z-index: 10;">&gt;</button>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div style="flex: 0 0 100%; width: 100%; height: 100%; position: relative;">
+            <!-- SCROLL LEFT BUTTON -->
+            <button onclick="document.getElementById('sites-vault').scrollBy({left: -document.getElementById('sites-vault').clientWidth, behavior: 'smooth'})" style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.8); color: #00FFFF; border: 1px solid #FF00FF; padding: 5px 10px; font-weight: bold; cursor: pointer; z-index: 10;">&lt;</button>
+            
+            <img src="site4.png" style="width: 100%; height: 100%; object-fit: cover;">
+            <!-- SCROLL RIGHT BUTTON -->
+            <button onclick="document.getElementById('sites-vault').scrollBy({left: document.getElementById('sites-vault').clientWidth, behavior: 'smooth'})" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.8); color: #00FFFF; border: 1px solid #FF00FF; padding: 5px 10px; font-weight: bold; cursor: pointer; z-index: 10;">&gt;</button>
+        </div>
+
+<!-- SLIDE 5 -->
+        <div style="flex: 0 0 100%; width: 100%; height: 100%; position: relative;">
+            <!-- SCROLL LEFT BUTTON -->
+            <button onclick="document.getElementById('sites-vault').scrollBy({left: -document.getElementById('sites-vault').clientWidth, behavior: 'smooth'})" style="position: absolute; left: 5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.8); color: #00FFFF; border: 1px solid #FF00FF; padding: 5px 10px; font-weight: bold; cursor: pointer; z-index: 10;">&lt;</button>
+            
+            <img src="site5.png" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        
+    </div>
+</div>
+
+
+        
+        <p>MORE TO COME LATER!</p>
+
+
+    </div>
+
+    <a href="index.html" class="back-link">&lt;&lt; BACK TO HOMEPAGE</a>
+
+</body>
+</html>

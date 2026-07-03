@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📷 Hub 03: Gallery</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #00FFFF; /* Cyan theme */
+            font-family: "Courier New", Courier, monospace;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #FF00FF; /* Hot Pink Header */
+            font-family: 'Arial Black', sans-serif;
+            border-bottom: 2px dashed #00FFFF;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows photos to wrap to the next line automatically */
+            justify-content: center;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .photo-card {
+            border: 3px ridge #FF00FF;
+            background-color: #001111;
+            padding: 15px;
+            width: 300px; /* Adjust this if you want the pics bigger or smaller */
+            text-align: center;
+        }
+        .photo-card img {
+    width: 100%;
+    height: 250px;       /* Forces all images to the exact same height */
+    object-fit: cover;   /* Automatically crops the sides/top so nothing looks squished */
+    border: 2px solid #00FFFF;
+    display: block;
+    margin-bottom: 10px;
+}
+
+        .caption {
+            color: #00FF00; /* Neon Green Text for the description */
+            font-size: 14px;
+            font-weight: bold;
+        }
+        a.back-link {
+            color: #00FF00;
+            text-decoration: underline;
+            display: block;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📸 /PHOTOGRAPHY_ARCHIVE/</h1>
+    
+    <p style="margin-bottom: 30px;">📷 Samsung Galaxy S20FE</p>
+
+    <div class="gallery-container">
+        <!-- PHOTO 1 -->
+        <div class="photo-card">
+            <img src="snowyday.jpg" alt="First photo">
+            <div class="caption">Morning of a random day in January in Toronto</div>
+        </div>
+
+        <!-- PHOTO 2 -->
+        <div class="photo-card">
+            <img src="flower.jpg" alt="Second photo">
+            <div class="caption">Saucer Magnolia at High Park in Toronto</div>
+        </div>
+
+        <!-- PHOTO 3 -->
+        <div class="photo-card">
+            <img src="niagara.jpg" alt="Third photo">
+            <div class="caption">Niagara Falls at night</div>
+        </div>
+        
+        <!-- PHOTO 4 -->
+        <div class="photo-card">
+            <img src="montreal.jpg" alt="Third photo">
+            <div class="caption">Montreal around the time of sunset in July</div>
+        </div>
+    </div>
+
+    <p>MORE TO COME LATER!</p>
+
+    <a href="index.html" class="back-link">&lt;&lt; BACK TO HOMEPAGE</a>
+
+</body>
+</html>
